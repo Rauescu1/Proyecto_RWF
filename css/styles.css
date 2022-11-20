@@ -1,33 +1,47 @@
-body{
-    margin: 0%;
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-div{
-    width: 100%;
-}
 
 /* CABECERA */
 
 header, footer{
     background-color: rgba(0, 86, 165, 1);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 150%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
 
-header a{
-    padding-right: 2%;
-    text-decoration: none;
-    text-transform: none;
-    color: white;
-}
 
-img{
+header img{
     float: left;
     margin-left: 1%;
 }
+
+/* Animacion de enlaces */
+
+header a {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header a:hover, header a:focus {
+    background-size: 100% 2px;
+    transition: 1s;
+    color: orange;
+}
+
 
 
 /* PIE DE PAGINA */
@@ -44,10 +58,39 @@ footer a{
 }
 
 footer img{
-    margin-top: 1.5%;
+    margin-top: 1%;
+    float: left;
+    margin-left: 1.5%;
 }
 
 #ig{
     float: right;
-    margin-right: 2%;
+    margin-right: 4%;
+    margin-top: 0%;
+}
+
+
+/* MAIN */
+
+.bandera{
+    width: 100%;   
+}
+.ruta{
+    padding-left: 1%;
+    margin-right: 87%;
+    font-size: 80%;
+    border-bottom: solid black;
+    border-right: solid black;
+}
+
+
+/* FORMULARIOS SUBMENU */
+
+
+.submenu>form>button{
+    background: none;
+    border: 0;
+    display: flex;
+    width: 100%;
+
 }
