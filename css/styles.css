@@ -38,7 +38,7 @@ header a {
 
 header a:hover, header a:focus {
     background-size: 100% 2px;
-    transition: 1s;
+    transition: 0.5s;
     color: orange;
 }
 
@@ -86,11 +86,16 @@ footer img{
 
 /* FORMULARIOS SUBMENU */
 
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    border: solid black;
+}
 
-.submenu>form>button{
+.boton{
+    padding-top: 2%;
     background: none;
     border: 0;
-    display: flex;
-    width: 100%;
-
 }

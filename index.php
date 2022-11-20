@@ -21,28 +21,25 @@
     
     <div class="submenu">
         <!-- formularios de submenu para realizar el include en cada caso -->
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-            <button>DESTACADOS</button>
-            <input type="hidden" name="accion" value="destacados">
-        </form>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-            <button>SOBRE NOSOTROS</button>
-            <input type="hidden" name="accion" value="nosotros">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="botones">
+            <input class="boton" type="submit" name='boton' value='DESTACADOS'>
+            <input class="boton" type="submit" name='boton2' value='SOBRE NOSOTROS'>
         </form>
 
+
         <?php 
-            if (!isset($_POST['accion'])){
-                include './componentes/subdestacados.php';
-            }
+           
             if($_SERVER["REQUEST_METHOD"] == "POST"){
-                if($_POST['accion']=='nosotros')
+                if(isset($_POST['boton']))
                 {
                     include './componentes/subnosotros.php';
                 }
-                else if ($_POST['accion']=='destacados')
+                else if (isset($_POST['boton2']))
                 {
                     include './componentes/subdestacados.php';
                 }
+            }else{
+                include './componentes/subdestacados.php';
             }
         ?>
     </div>
