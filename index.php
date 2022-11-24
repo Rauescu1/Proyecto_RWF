@@ -22,8 +22,10 @@
     <div class="submenu">
         <!-- formularios de submenu para realizar el include en cada caso -->
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="botones">
-            <input class="boton" type="submit" name='boton' value='DESTACADOS'>
-            <input class="boton" type="submit" name='boton2' value='SOBRE NOSOTROS'>
+            <input id='b1' class="boton" type="submit" name='boton' value='DESTACADOS'>
+            <input id='b2' class="boton" type="submit" name='boton2' value='SOBRE NOSOTROS'>
+            
+        
         </form>
 
 
@@ -32,17 +34,41 @@
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(isset($_POST['boton']))
                 {
-                    include './componentes/subnosotros.php';
+                    include './componentes/subdestacados.php';
+                    echo "
+                    <style>
+                    #b1{
+                        color:rgba(0, 86, 165, 1);
+                    }
+                    </style>
+                    ";
                 }
                 else if (isset($_POST['boton2']))
                 {
-                    include './componentes/subdestacados.php';
+                    include './componentes/subnosotros.php';
+                    echo "
+                    <style>
+                    #b2{
+                        color:rgba(0, 86, 165, 1);
+                    }
+                    </style>
+                    ";
+
                 }
             }else{
                 include './componentes/subdestacados.php';
+                echo "
+                    <style>
+                    #b1{
+                        color:rgba(0, 86, 165, 1);
+                    }
+                    </style>
+                    ";
             }
         ?>
     </div>
+
+
 
 
 

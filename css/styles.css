@@ -1,15 +1,24 @@
+:root {
+    --header-color: rgba(0, 86, 165, 1);
+    
+  }
+
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* variables de colores */
+
+
+  
 
 
 /* CABECERA */
 
 header, footer{
-    background-color: rgba(0, 86, 165, 1);
+    background-color: var(--header-color);
     text-align: center;
     font-size: 150%;
     padding-top: 1.5%;
@@ -91,11 +100,59 @@ footer img{
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    border: solid black;
 }
 
 .boton{
     padding-top: 2%;
     background: none;
     border: 0;
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
 }
+
+.boton:hover, .boton:focus {
+    background-size: 100% 2px;
+    transition: 0.5s;
+    color: orange;
+}
+
+
+
+/* MAIN DEL PROGRAMA */
+
+
+/* DESTACADOS/FAVORITOS */
+.coches{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.favoritos{
+    border: solid rgba(161, 210, 253, 1) 3px;
+    text-align: center;
+    padding: 1%;
+    margin: 2%;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    width: 400px;
+}
+
+
+.favoritos img{
+    border-radius:2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 300px;
+}
+
+
+/* SOBRE NOSOTROS */
