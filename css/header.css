@@ -1,0 +1,80 @@
+:root {
+    --header-color: rgba(0, 86, 165, 1);
+    --color-secundario: rgba(161, 210, 253, 1) ;
+  }
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* variables de colores */
+
+
+  
+
+
+/* CABECERA */
+
+header, footer{
+    background-color: var(--header-color);
+    text-align: center;
+    font-size: 150%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+
+header img{
+    float: left;
+    margin-left: 1%;
+}
+
+/* Animacion de enlaces */
+
+header a {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header a:hover, header a:focus {
+    background-size: 100% 2px;
+    transition: 0.5s;
+    color: orange;
+}
+
+
+
+/* PIE DE PAGINA */
+footer{
+    font-size: 80%;
+    color: white;
+
+}
+
+footer a{
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+}
+
+footer img{
+    margin-top: 1%;
+    float: left;
+    margin-left: 1.5%;
+}
+
+#ig{
+    float: right;
+    margin-right: 4%;
+    margin-top: 0%;
+}
+

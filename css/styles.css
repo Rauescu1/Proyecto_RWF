@@ -1,6 +1,6 @@
 :root {
-    --header-color: rgba(0, 86, 165, 1);
-    --color-secundario: rgba(161, 210, 253, 1) ;
+    --header-color: #0056a5;
+    --color-secundario: #a1d2fd ;
   }
 
 * { 
@@ -10,10 +10,6 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /* variables de colores */
-
-
-  
-
 
 /* CABECERA */
 
@@ -144,6 +140,7 @@ footer img{
     border-bottom-width: 3px;
     border-left-width: 3px;
     width: 400px;
+
 }
 
 
@@ -152,32 +149,82 @@ footer img{
     margin-top: 3%;
     margin-bottom: 3%;
     width: 300px;
+    height: 300px;
+
 }
 
 .descripcion{
-    box-sizing: content-box;
-    height: 300px;
+    text-align: justify;
+    margin: 10px;
 }
 
 
-.mas{
-    transition: 0.5s;
-    text-decoration: none;
-    margin-top: 5%;
-    border: solid var(--color-secundario) 3px;
-    padding: 2%;
-    float: left;
-    color: var(--header-color);
-}
+/* ENLACE MAS, CAJA DE FUERA Y ENLACE DE DENTRO */
 
-.mas:hover{
-    transition: 0.5s;
-    background-color: var(--color-secundario);
-    color: black;
+.mas_box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 90px;
 }
 
 
-
+.mas {
+    --b: 0.1em;
+    --c: #0056a5;
+    
+    color: #0000;
+    padding-block: var(--b);
+    background: 
+      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  }
+  .mas:hover {
+    --_p: 100%;
+    --_s: .3s;
+  }
+  
 
 
 /* SOBRE NOSOTROS */
+
+#contenido_nosotros{
+    margin: 3%;
+    margin-left: 25% ;
+    margin-right: 25% ;
+    text-align: justify;
+
+}
+
+
+#proyectos_enlace{
+    text-decoration: none;
+    color: #0056a5;
+}
+
+
+/* Servicio tecnico */
+
+.st p{
+    margin-left: 25% ;
+    margin-right: 25% ;
+    margin-bottom: 2%;
+    text-align: justify;
+    border: #a1d2fd solid 3px;
+    padding: 2%;
+
+}
+
+#h2st{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.st>p>a{
+    text-decoration: none;
+    color: #0056a5;
+}
